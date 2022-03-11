@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: var(--bg-secondary);
+  width: 200px;
+  height: 100vh;
+  text-align: center;
+
+  .logo {
+    a {
+      font-size: 3rem;
+      color: var(--text-secondary);
+      margin: 2rem;
+    }
+  }
+
+  ul {
+    margin-top: 5rem;
+    li {
+      margin: 2rem;
+
+      a {
+        color: inherit;
+        transition: all 0.2s;
+
+        &:hover {
+          color: var(--text-secondary);
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: auto;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+}
