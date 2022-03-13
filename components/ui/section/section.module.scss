@@ -1,0 +1,26 @@
+.section {
+  padding: 10rem;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    // &::after {
+    //   content: "";
+    //   top: 0;
+    //   left: 0;
+
+    // }
+  }
+
+  hr {
+    margin-top: 1rem !important;
+
+    width: 3rem;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
