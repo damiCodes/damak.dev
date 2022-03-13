@@ -1,0 +1,32 @@
+.btn {
+  margin-top: 2rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    width: 15rem;
+    height: 5rem;
+    background: var(--bg-tertiary);
+    outline: 1px solid var(--bg-tertiary);
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      var(--bg-primary) 50%
+    );
+    background-size: 228%;
+    transition: all 0.4s;
+    background-position: 179%;
+    transform: scale(1);
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.05);
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      transform: scale(2);
+      transform: translateX(-0.5rem);
+    }
+  }
+}
