@@ -3,6 +3,7 @@
   --black: #000000;
   --bg-primary: #222222;
   --bg-secondary: #1f1f1f;
+  --bg-tertiary: #a22c29;
   --text-primary: #c4c4c4;
   --text-secondary: #a22c29;
 
@@ -28,6 +29,7 @@
 
 html {
   font-size: 66.6667%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -39,21 +41,31 @@ body {
   background-color: var(--bg-primary);
 }
 
-::-webkit-scrollbar {
-  width: 0.4rem;
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: 0 7rem;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #626d58;
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 8rem;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #c4c4c4;
-  border-radius: 2rem;
+h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 4.8rem;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #1e2425;
+p {
+  font-style: normal;
+  font-weight: 400;
+  // letter-spacing: -0.16px;
 }
 
 a,
@@ -75,6 +87,23 @@ button:visited {
 }
 
 ::selection {
-  background-color: var(--color-primary-dark);
+  background-color: #1f6c66;
   color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #626d58;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1e2425;
 }
