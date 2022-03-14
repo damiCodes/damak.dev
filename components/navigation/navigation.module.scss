@@ -6,6 +6,7 @@
   width: 200px;
   height: 100vh;
   text-align: center;
+  z-index: 2;
 
   .logo {
     margin: 2rem;
@@ -21,36 +22,23 @@
     // text-align: left;
     margin-top: 5rem;
     color: var(--text-white);
-
-    li {
-      &:not(:last-child) {
-        margin-bottom: 0.5rem;
-      }
-
-      svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 1rem;
-      }
-
-      a {
-        display: flex;
-        align-items: center;
-        color: inherit;
-        padding: 1rem 2.5rem;
-        width: 100%;
-        transition: all 0.2s;
-
-        &:hover {
-          color: var(--text-secondary);
-        }
-      }
-    }
   }
 
   .footer {
     margin-top: auto;
     padding: 2rem;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    svg {
+      stroke: var(--text-white);
+      transition: all 0.3s;
+
+      &:hover {
+        stroke: var(--bg-tertiary);
+        transform: scale(1.1);
+      }
+    }
   }
 }

@@ -1,0 +1,42 @@
+.li {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.3rem;
+    background-color: var(--bg-tertiary);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.2s;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    transition: all 0.2s;
+  }
+}
