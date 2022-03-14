@@ -28,5 +28,27 @@
       transform: scale(2);
       transform: translateX(-0.5rem);
     }
+
+    span {
+      margin-left: 1rem;
+      margin-top: 0.6rem;
+      transition: margin-left 0.4s ease-out;
+      animation: bounce 1s;
+      // animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(-2px);
   }
 }
