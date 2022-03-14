@@ -1,8 +1,38 @@
-.btn {
-  margin-top: 4rem;
+.body {
+  // display: flex;
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    border-radius: 50%;
+    shape-outside: circle();
+    // border: 1px solid white;
+    margin-right: 7rem;
+    height: 22rem;
+    width: 22rem;
+
+    img {
+      height: 17rem;
+      width: 20rem;
+    }
+  }
+  // .btn {
+  //   margin-top: 4rem;
+  //   a {
+  //     color: var(--white);
+  //     border: 1px solid var(--bg-tertiary);
+  //     padding: 1.7rem 4rem;
+  //   }
+  // }
+
   a {
-    color: var(--white);
-    border: 1px solid var(--bg-tertiary);
-    padding: 1.7rem 4rem;
+    margin-top: 2rem;
+    margin: 0 auto;
   }
 }
