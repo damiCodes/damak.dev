@@ -1,0 +1,16 @@
+.background-text {
+  font-family: "Abril Fatface", cursive;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  //   z-index: 1;
+  font-size: 15rem;
+  line-height: 0.8;
+  white-space: nowrap;
+  opacity: 0.015;
+  text-transform: capitalize;
+  user-select: none;
+  -webkit-user-select: none;
+  //   writing-mode: vertical-lr;
+}
