@@ -1,5 +1,21 @@
-import classes from "../styles/Home.module.scss";
+import Wrapper from "../components/ui/wrapper";
+import Hero from "../components/hero";
+import About from "../components/about";
+import Arsenal from "../components/arsenal";
+import Experience from "../components/experience";
+import Playground from "../components/playground";
+import Contact from "../components/contact";
+// import classes from "../styles/Home.module.scss";
 
 export default function Home() {
-  return <div className={classes.container}>Home</div>;
+  return (
+    <Wrapper>
+      <Hero />
+      <About />
+      <Arsenal />
+      <Experience />
+      <Playground />
+      <Contact />
+    </Wrapper>
+  );
 }
