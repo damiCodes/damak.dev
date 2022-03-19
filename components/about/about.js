@@ -7,12 +7,13 @@ import classes from "./about.module.scss";
 
 export default function about() {
   return (
-    <Section id="about" heading="About" tagline="Me, Myself & I">
+    <Section
+      id="about"
+      heading="About"
+      tagline="Me, Myself & I"
+      bgText="about me"
+    >
       <div className={classes.body}>
-        <div className={classes.image}>
-          {/* <Image src={AboutImage} alt="about" height={1800} width={2000} /> */}
-          <img src={AboutImage.src} alt="about" />
-        </div>
         <div className={classes.text}>
           My name is Damilola Akinlade but you can call me Damak. I am a
           Computer Engineer, front-end developer, and Javascript enthusiast,
@@ -25,8 +26,12 @@ export default function about() {
           tackle technical problems in the best way possible. Being diligent and
           result-oriented, I work towards achieving the best results on every
           project I partake in.
+          <Button href="resume">Resume</Button>
         </div>
-        <Button>Resume</Button>
+        <div className={classes.image}>
+          {/* <Image src={AboutImage} alt="about" height={1800} width={2000} /> */}
+          <img src={AboutImage.src} alt="about" />
+        </div>
       </div>
     </Section>
   );
