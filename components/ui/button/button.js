@@ -5,7 +5,7 @@ import classes from "./button.module.scss";
 export default function Button({ href, children }) {
   return (
     <div className={classes.btn}>
-      <Link href={`#${href}`}>
+      <Link href={href}>
         <a>
           {children}{" "}
           <span>

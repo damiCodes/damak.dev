@@ -1,15 +1,17 @@
 .btn {
+  position: relative;
+  z-index: 1;
   margin-top: 2rem;
 
   a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: var(--text-white);
     width: 15rem;
-    height: 5rem;
-    background: var(--bg-tertiary);
-    outline: 1px solid var(--bg-tertiary);
+    height: 4.5rem;
+    background: var(--accent-color);
+    outline: 1px solid var(--accent-color);
     background-image: linear-gradient(
       120deg,
       transparent 0%,
@@ -19,22 +21,20 @@
     background-size: 228%;
     transition: all 0.4s;
     background-position: 179%;
-    transform: scale(1);
     box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.05);
+    border-radius: 0.3rem;
 
     &:hover,
     &:active {
       background-position: 100%;
-      transform: scale(2);
-      transform: translateX(-0.5rem);
+      transform: translateX(0.5rem);
     }
 
     span {
       margin-left: 1rem;
-      margin-top: 0.6rem;
+      margin-top: 0.8rem;
       transition: margin-left 0.4s ease-out;
       animation: bounce 1s;
-      // animation-direction: alternate;
       animation-iteration-count: infinite;
     }
   }
