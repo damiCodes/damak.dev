@@ -3,22 +3,4 @@
   max-width: 1400px;
   margin: 0 auto;
   background-color: var(--bg-primary);
-
-  .social-icons {
-    position: fixed;
-    bottom: 5rem;
-    right: 1rem;
-    // transform: rotate(90);
-    writing-mode: vertical-lr;
-  }
-
-  .social-icons::after {
-    position: fixed;
-    content: "";
-    bottom: 0;
-    right: 2rem;
-    height: 4rem;
-    width: 0.2rem;
-    background-color: var(--text-primary);
-  }
 }

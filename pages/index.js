@@ -9,13 +9,15 @@ import Contact from "../components/contact";
 
 export default function Home() {
   return (
-    <Wrapper>
+    <>
       <Hero />
-      <About />
-      <Arsenal />
-      <Experience />
-      <Playground />
-      <Contact />
-    </Wrapper>
+      <main>
+        <About />
+        <Arsenal />
+        <Experience />
+        <Playground />
+        <Contact />
+      </main>
+    </>
   );
 }
