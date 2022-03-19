@@ -2,18 +2,26 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  background-color: var(--bg-secondary);
-  width: 200px;
-  height: 100vh;
+  background-color: var(--bg-black);
+  width: 10rem;
+  height: 100%;
   text-align: center;
   z-index: 2;
 
   .logo {
-    margin: 2rem;
+    margin: 2rem auto;
     font-style: italic;
+    height: 7rem;
+    width: 7rem;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     a {
       font-size: 3rem;
-      color: var(--text-secondary);
+      color: var(--text-white);
     }
   }
 
@@ -22,23 +30,5 @@
     // text-align: left;
     margin-top: 5rem;
     color: var(--text-white);
-  }
-
-  .footer {
-    margin-top: auto;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    svg {
-      stroke: var(--text-white);
-      transition: all 0.3s;
-
-      &:hover {
-        stroke: var(--bg-tertiary);
-        transform: scale(1.1);
-      }
-    }
   }
 }
