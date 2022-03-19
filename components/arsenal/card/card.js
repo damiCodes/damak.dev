@@ -1,8 +1,6 @@
 import classes from "./card.module.scss";
 
 export default function Card({ icon, lists }) {
-  console.log(lists);
-
   if (!lists) {
     return <p>Loading....</p>;
   }
@@ -15,7 +13,6 @@ export default function Card({ icon, lists }) {
       <div className={classes.back}>
         <div className={classes.content}>
           <ul>
-            {!lists && console.log("loading")}
             {lists.map((list) => {
               return (
                 <li key={list.text}>
