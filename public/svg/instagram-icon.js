@@ -12,8 +12,8 @@ export default function InstagramIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="feather feather-instagram"
-      height="2rem"
-      width="2rem"
+      height="1.9rem"
+      width="1.9rem"
     >
       <title>Instagram</title>
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
