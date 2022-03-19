@@ -1,0 +1,7 @@
+.all-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 7.5rem;
+  row-gap: 8.5rem;
+  // justify-content: space-between;
+}
