@@ -1,11 +1,35 @@
+import Head from "next/head";
+import { useState, useEffect } from "react";
+import Logo from "../public/svg/logo";
 import Layout from "../components/layout";
+import PreLoader from "../components/ui/pre-loader";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
+  const [loader, setLoader] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  if (loader) {
+    return <PreLoader />;
+  }
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.svg" />
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 
