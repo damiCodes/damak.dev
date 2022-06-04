@@ -1,15 +1,16 @@
 .body {
   perspective: 150rem;
   position: relative;
-  height: 35rem;
+  height: 38rem;
   z-index: 10;
+  // width: 100%;
 
   & > div {
     background-color: var(--bg-secondary);
     position: absolute;
     top: 0;
     left: 0;
-    height: 35rem;
+    height: 100%;
     width: 100%;
     border-radius: 0.3rem;
     transition: all 0.9s ease;
@@ -21,6 +22,14 @@
   .front {
     color: var(--text-primary);
     padding: 2rem;
+
+    svg {
+      position: absolute;
+      width: 20px;
+      fill: var(--bg-white);
+      top: 140px;
+      right: 30px;
+    }
 
     .image {
       background-color: var(--accent-color);

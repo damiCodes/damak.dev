@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Logo from "../../../public/svg/logo";
 import classes from "./rotating-card.module.scss";
 
 export default function RotatingCard({ children }) {
   return (
     <div className={classes.body}>
       <div className={classes.front}>
+        <Logo />
         <div className={classes.image}></div>
         <div className={classes.stack}>
           <h3>Sample Project</h3>
