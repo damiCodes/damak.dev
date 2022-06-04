@@ -1,5 +1,11 @@
 .content-wrapper {
-  width: calc(100% - 20rem);
+  padding: 0 5rem;
+  margin-left: 10rem;
   background-color: var(--bg-primary);
-  margin-left: 20rem;
+}
+
+@media screen and (max-width: 480px) {
+  .content-wrapper {
+    margin-left: 0;
+  }
 }
