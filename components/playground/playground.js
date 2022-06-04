@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Section from "../ui/section/";
 import AllProjects from "./all-projects";
 import classes from "./playground.module.scss";
@@ -13,7 +14,13 @@ export default function Playground() {
       tagline="what i have done so far"
       bgText="projects"
     >
-      <nav className={classes.tabs}>
+      <motion.nav
+        initial={{ y: 10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className={classes.tabs}
+      >
         <button
           style={{
             backgroundColor: activeTab === "all" ? "var(--accent-color)" : null,
@@ -31,7 +38,7 @@ export default function Playground() {
         >
           Featured
         </button>
-      </nav>
+      </motion.nav>
       {activeTab === "all" && <AllProjects />}
     </Section>
   );
