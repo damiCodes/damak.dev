@@ -8,6 +8,7 @@ import ReactIcon from "../../public/svg/react-icon";
 import NextjsIcon from "../../public/svg/nextjs-icon";
 import Jquery from "../../public/svg/jquery-icon";
 import GitIcon from "../../public/svg/git-icon";
+import { motion } from "framer-motion";
 import FirebaseIcon from "../../public/svg/firebase-icon";
 import VercelIcon from "../../public/svg/vercel-icon";
 import classes from "./arsenal.module.scss";
@@ -51,11 +52,30 @@ export default function Arsenal() {
       tagline="My Development Arsenal"
       bgText="arsenal"
     >
-      <div className={classes.body}>
-        {cards.map((card) => {
-          return <Card key={card.id} {...card} />;
+      <motion.div
+        className={classes.body}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "tween",
+          duration: 0.6,
+        }}
+      >
+        {cards.map((card, index) => {
+          return (
+            <motion.div
+              key={card.id}
+              initial={{ translateY: 100, opacity: 0 }}
+              whileInView={{ translateY: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.2 }}
+            >
+              <Card {...card} />
+            </motion.div>
+          );
         })}
-      </div>
+      </motion.div>
     </Section>
   );
 }
