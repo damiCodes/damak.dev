@@ -1,15 +1,31 @@
+import { motion } from "framer-motion";
 import BackgroundText from "../background-text";
 import classes from "./section.module.scss";
 
 export default function Section({ children, id, heading, tagline, bgText }) {
   return (
     <section id={id} className={classes.section}>
-      <div className={classes.heading}>
+      <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className={classes.heading}
+      >
         <h2>{heading}</h2>
         <h3>{tagline}</h3>
-        <hr />
-      </div>
-      <div className={classes.content}>{children}</div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.6,
+        }}
+        className={classes.content}
+      >
+        {children}
+      </motion.div>
       <BackgroundText bgText={bgText} />
     </section>
   );
