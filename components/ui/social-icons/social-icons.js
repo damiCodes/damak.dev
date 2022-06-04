@@ -1,13 +1,23 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 import GithubIcon from "../../../public/svg/github-icon";
 import LinkedinIcon from "../../../public/svg/linkedin-icon";
 import TwitterIcon from "../../../public/svg/twitter-icon";
 import InstagramIcon from "../../../public/svg/instagram-icon";
 import classes from "./social-icons.module.scss";
 
-export default function SocialIcons() {
+export default function SocialIcons({ delay }) {
   return (
-    <div className={classes["social-icons"]}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.6,
+        delay: delay,
+      }}
+      className={classes["social-icons"]}
+    >
       <Link href="https://github.com/damiCodes">
         <a target="_blank">
           <GithubIcon />
@@ -29,6 +39,6 @@ export default function SocialIcons() {
           <LinkedinIcon />
         </a>
       </Link>
-    </div>
+    </motion.div>
   );
 }
