@@ -27,9 +27,11 @@ export default function Navigation() {
     <>
       {width > 480 && (
         <motion.nav
-          initial={{ x: -60, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.4 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.4,
+          }}
           className={classes.nav}
         >
           <motion.div
