@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { motion } from "framer-motion";
 import NavLink from "./nav-link/nav-link";
