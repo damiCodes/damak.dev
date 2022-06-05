@@ -15,7 +15,7 @@
     justify-content: center;
     width: auto;
 
-    img {
+    svg {
       width: 40.7rem;
       height: 31.9rem;
     }
@@ -26,7 +26,7 @@
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
   .body {
     flex-direction: column;
     align-items: flex-start;
@@ -38,10 +38,6 @@
     .image {
       width: 100%;
       margin: 0 auto;
-    }
-
-    a {
-      margin-bottom: 5rem;
     }
   }
 }
