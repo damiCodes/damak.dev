@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Section from "../ui/section/";
 import Button from "../ui/button";
-import AboutImage from "../../public/images/about-section-image.png";
+import Programmer from "../../public/svg/programmer";
 import classes from "./about.module.scss";
 
 export default function About() {
@@ -34,16 +34,12 @@ export default function About() {
           result-oriented, I work towards achieving the best results on every
           project I partake in.
         </motion.p>
-        {width <= 760 && <Button href="/resume">Resume</Button>}
+        {width <= 800 && <Button href="/resume">Resume</Button>}
         <div className={classes.image}>
-          <motion.img
-            whileTap={{ scale: 0.95 }}
-            src={AboutImage.src}
-            alt="about"
-          />
+          <Programmer />
         </div>
       </div>
-      {width > 760 && <Button href="/resume">Resume</Button>}
+      {width > 800 && <Button href="/resume">Resume</Button>}
     </Section>
   );
 }
