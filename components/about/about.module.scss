@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: auto;
 
     img {
       width: 40.7rem;
@@ -35,11 +36,23 @@
     }
 
     .image {
+      width: 100%;
       margin: 0 auto;
     }
 
     a {
       margin-bottom: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .body {
+    .image {
+      img {
+        width: 31rem;
+        height: 26rem;
+      }
     }
   }
 }
