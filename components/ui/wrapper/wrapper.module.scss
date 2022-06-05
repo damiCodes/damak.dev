@@ -4,6 +4,12 @@
   background-color: var(--bg-primary);
 }
 
+@media screen and (max-width: 760px) {
+  .content-wrapper {
+    margin-left: 8rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .content-wrapper {
     margin-left: 0;
