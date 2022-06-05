@@ -2,7 +2,24 @@
   position: relative;
   border-top: 1px solid var(--bg-tertiary);
   width: 100%;
-
+  .logo {
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 50%;
+    svg {
+      width: 2.5rem;
+      fill: var(--text-primary);
+    }
+  }
   .content {
     display: flex;
     align-items: center;
@@ -15,14 +32,21 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  .footer {
+    .content {
+      flex-direction: column;
+      margin-top: 1rem;
+      padding: 2rem 0;
+      height: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 480px) {
   .footer {
     margin-bottom: 5.8rem;
-
     .content {
-      flex-direction: column;
-      padding: 2rem 0;
-      height: auto;
     }
   }
 }
