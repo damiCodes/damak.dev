@@ -11,7 +11,7 @@
   h4 {
     font-size: 18px;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 3rem;
     color: var(--text-primary);
   }
 
@@ -55,6 +55,27 @@
       color: var(--text-primary);
       font-size: 20px;
       line-height: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header {
+    h4 {
+      line-height: 1rem;
+    }
+
+    .intro {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+
+    .tag-line {
+      h1 {
+        font-size: 5rem;
+        line-height: 6rem;
+      }
     }
   }
 }
