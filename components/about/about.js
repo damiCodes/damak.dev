@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Section from "../ui/section/";
 import Button from "../ui/button";
 import AboutImage from "../../public/images/about-section-image.png";
 import classes from "./about.module.scss";
 
 export default function About() {
+  const { width } = useWindowDimensions();
+
   return (
     <Section
       id="about"
@@ -13,7 +16,7 @@ export default function About() {
       bgText="about me"
     >
       <div className={classes.body}>
-        <motion.div
+        <motion.p
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -25,14 +28,13 @@ export default function About() {
           based in Lagos, Nigeria. I am very passionate about building things
           for the web. My superpower is building delightful user interfaces with
           good ol’ vanilla CSS.
-          {/* <br /> */}
           <br />
           You can find me at my workspace cackling on my keyboard trying to
           tackle technical problems in the best way possible. Being diligent and
           result-oriented, I work towards achieving the best results on every
           project I partake in.
-          <Button href="/resume">Resume</Button>
-        </motion.div>
+        </motion.p>
+        {width <= 760 && <Button href="/resume">Resume</Button>}
         <div className={classes.image}>
           <motion.img
             whileTap={{ scale: 0.95 }}
@@ -41,6 +43,7 @@ export default function About() {
           />
         </div>
       </div>
+      {width > 760 && <Button href="/resume">Resume</Button>}
     </Section>
   );
 }
