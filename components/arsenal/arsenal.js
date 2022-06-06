@@ -1,9 +1,11 @@
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Section from "../ui/section/";
 import Card from "./card";
 import HtmlIcon from "../../public/svg/html-icon";
 import CssIcon from "../../public/svg/css-icon";
 import ScssIcon from "../../public/svg/scss-icon";
 import JavascriptIcon from "../../public/svg/javascript-icon";
+import TypeScriptIcon from "../../public/svg/typeScript-icon";
 import ReactIcon from "../../public/svg/react-icon";
 import NextjsIcon from "../../public/svg/nextjs-icon";
 import Jquery from "../../public/svg/jquery-icon";
@@ -14,15 +16,17 @@ import VercelIcon from "../../public/svg/vercel-icon";
 import classes from "./arsenal.module.scss";
 
 export default function Arsenal() {
+  const { width } = useWindowDimensions();
   const cards = [
     {
       id: "programming-languages",
       icon: "</>",
       lists: [
-        { icon: <HtmlIcon />, text: "HTML" },
-        { icon: <CssIcon />, text: "CSS" },
+        // { icon: <HtmlIcon />, text: "HTML" },
+        // { icon: <CssIcon />, text: "CSS" },
         { icon: <ScssIcon />, text: "SCSS" },
-        { icon: <JavascriptIcon />, text: "Javascript" },
+        { icon: <JavascriptIcon />, text: width > 380 ? "Javascript" : "JS" },
+        { icon: <TypeScriptIcon />, text: width > 380 ? "Typescript" : "TS" },
       ],
     },
     {
@@ -31,7 +35,7 @@ export default function Arsenal() {
       lists: [
         { icon: <ReactIcon />, text: "React" },
         { icon: <NextjsIcon />, text: "Next" },
-        { icon: <Jquery />, text: "Jquery" },
+        // { icon: <Jquery />, text: "Jquery" },
       ],
     },
     {
