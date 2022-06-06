@@ -5,7 +5,6 @@ export function Swg() {
     <motion.div
       animate={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 30 }}
-      // exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
     >
       <h3>Front-end Developer</h3>
@@ -29,7 +28,6 @@ export function Hng() {
     <motion.div
       animate={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 30 }}
-      // exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
     >
       <h3>Intern</h3>
@@ -52,7 +50,6 @@ export function Ris() {
     <motion.div
       animate={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 30 }}
-      // exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
     >
       <h3>Intern</h3>
@@ -71,7 +68,6 @@ export function Gni() {
     <motion.div
       animate={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 30 }}
-      // exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
     >
       <h3>Intern</h3>

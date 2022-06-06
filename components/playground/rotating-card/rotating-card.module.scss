@@ -3,7 +3,6 @@
   position: relative;
   height: 38rem;
   z-index: 10;
-  // width: 100%;
 
   & > div {
     background-color: var(--bg-secondary);
@@ -16,7 +15,6 @@
     transition: all 0.9s ease;
     backface-visibility: hidden;
     box-shadow: 6px 4px 16px 2px rgba(0, 0, 0, 0.25);
-    // padding-bottom: 8rem;
   }
 
   .front {
@@ -25,18 +23,16 @@
 
     svg {
       position: absolute;
-      width: 20px;
+      width: 2rem;
       fill: var(--bg-white);
-      top: 140px;
-      right: 30px;
+      top: 15rem;
+      right: 3rem;
     }
 
     .image {
       background-color: var(--accent-color);
       height: 16rem;
       border-radius: 0.3rem;
-      // background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
-      // background-image: linear-gradient(to right bottom, #43fa8c, #43d9fa);
     }
 
     .stack {
@@ -48,7 +44,6 @@
       span {
         font-family: "Anonymous Pro", monospace;
         align-self: flex-start;
-        // margin-bottom: 1rem;
         border-radius: 1rem;
       }
     }
@@ -56,14 +51,12 @@
 
   .back {
     transform: rotateY(180deg);
-    // background-image: linear-gradient(to right bottom, #2972ff, #7343fa);
 
     .description {
       padding: 2rem;
       height: 70%;
 
       hr {
-        // margin: 0;
         margin: 1rem 0;
         width: 4rem;
         border: 0.7px solid var(--accent-color);
