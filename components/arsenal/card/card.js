@@ -6,11 +6,11 @@ export default function Card({ icon, lists }) {
   }
 
   return (
-    <div className={classes.card}>
-      <div className={classes.front}>
+    <div className={classes.container}>
+      <div className={classes.banner}>
         <div className={classes.icon}>{icon}</div>
       </div>
-      <div className={classes.back}>
+      <div className={classes.list}>
         <div className={classes.content}>
           <ul>
             {lists.map((list) => {

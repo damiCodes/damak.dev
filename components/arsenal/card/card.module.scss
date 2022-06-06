@@ -1,17 +1,17 @@
-.card {
+.container {
   font-family: "Lato", sans-serif;
+  width: 100%;
+  position: relative;
 
-  .front {
+  .banner {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 22rem;
+    width: 100%;
     height: 22rem;
     background-color: var(--bg-tertiary);
-    cursor: pointer;
-    position: relative;
     z-index: 1;
-    transition: all 0.7s;
+    // transition: all 0.7s;
     box-shadow: 0.6rem 0.4rem 1.6rem 0.2rem rgba(0, 0, 0, 0.25);
 
     .icon {
@@ -27,26 +27,26 @@
     }
   }
 
-  .back {
-    width: 21.8rem;
+  .list {
+    width: 100%;
     height: 15rem;
     background-color: var(--bg-white);
     color: var(--text-tertiary);
     font-size: 1.7rem;
     padding: 2rem;
-    margin-left: 0.2rem;
+    // margin-left: 0.2rem;
     letter-spacing: 1px;
-    transform: translateY(-130px);
+    // transform: translateY(-130px);
     position: relative;
     z-index: 0;
-    transition: all 0.8s;
+    // transition: all 0.8s;
     box-shadow: 6px 4px 16px 2px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
-      width: 30px;
+      width: 3rem;
       height: 0.4rem;
       bottom: 0.5rem;
       left: 50%;
@@ -61,16 +61,87 @@
           align-items: center;
 
           svg {
-            height: 1.6rem;
-            width: 1.6rem;
+            height: 2rem;
+            width: 2rem;
             margin-right: 0.75rem;
           }
         }
       }
     }
   }
+}
 
-  &:hover .back {
-    transform: translateY(0);
+@media screen and (max-width: 760px) {
+  .container {
+    .banner {
+      height: 15rem;
+      .icon {
+        font-size: 2rem;
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    display: flex;
+    .banner {
+      height: 22rem;
+      width: 22rem;
+    }
+    .list {
+      height: 22rem;
+      width: 22rem;
+      &::after {
+        top: 50%;
+        left: 21rem;
+        height: 3rem;
+        width: 0.3rem;
+        transform: translateY(-50%);
+      }
+      .content {
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .container {
+    .banner {
+      height: 18rem;
+      width: 18rem;
+    }
+    .list {
+      height: 18rem;
+      width: 18rem;
+      &::after {
+        left: 17rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    .banner {
+      height: 14rem;
+      width: 14rem;
+    }
+    .list {
+      height: 14rem;
+      width: 14rem;
+      &::after {
+        left: 13rem;
+      }
+    }
   }
 }
