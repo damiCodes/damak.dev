@@ -18,7 +18,7 @@ export default function SocialIcons({ delay }) {
       }}
       className={classes["social-icons"]}
     >
-      <Link href="https://github.com/damiCodes">
+      <Link href="https://github.com/damakdev">
         <a target="_blank">
           <GithubIcon />
         </a>
