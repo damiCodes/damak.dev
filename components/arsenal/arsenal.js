@@ -5,7 +5,7 @@ import HtmlIcon from "../../public/svg/html-icon";
 import CssIcon from "../../public/svg/css-icon";
 import ScssIcon from "../../public/svg/scss-icon";
 import JavascriptIcon from "../../public/svg/javascript-icon";
-import TypeScriptIcon from "../../public/svg/typeScript-icon";
+import TypeScriptIcon from "../../public/svg/typescript-icon";
 import ReactIcon from "../../public/svg/react-icon";
 import NextjsIcon from "../../public/svg/nextjs-icon";
 import Jquery from "../../public/svg/jquery-icon";
