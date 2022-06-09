@@ -23,11 +23,10 @@ export default function About() {
           transition={{ delay: 0.9, duration: 0.6 }}
           className={classes.text}
         >
-          My name is Damilola Akinlade but you can call me Damak. I am a
-          Computer Engineer, front-end developer, and Javascript enthusiast,
-          based in Lagos, Nigeria. I am very passionate about building things
-          for the web. My superpower is building delightful user interfaces with
-          good ol’ vanilla CSS.
+          My name is Damilola Akinlade. I am a Computer Engineer, front-end
+          developer, and Javascript enthusiast, based in Lagos, Nigeria. I am
+          very passionate about building things for the web. My superpower is
+          building delightful user interfaces with good ol’ vanilla CSS.
           <br />
           You can find me at my workspace cackling on my keyboard trying to
           tackle technical problems in the best way possible. Being diligent and
