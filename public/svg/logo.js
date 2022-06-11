@@ -1,3 +1,5 @@
+// import { motion } from "framer-motion";
+
 export default function Logo(props) {
   return (
     <svg
