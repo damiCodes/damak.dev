@@ -2,6 +2,7 @@
   font-family: "Lato", sans-serif;
   width: 100%;
   position: relative;
+  box-shadow: var(--box-shadow);
 
   .banner {
     display: flex;
@@ -12,7 +13,6 @@
     background-color: var(--bg-tertiary);
     z-index: 1;
     // transition: all 0.7s;
-    box-shadow: 0.6rem 0.4rem 1.6rem 0.2rem rgba(0, 0, 0, 0.25);
 
     .icon {
       display: flex;
@@ -40,8 +40,7 @@
     position: relative;
     z-index: 0;
     // transition: all 0.8s;
-    box-shadow: 6px 4px 16px 2px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
+    // cursor: pointer;
 
     &::after {
       content: "";
