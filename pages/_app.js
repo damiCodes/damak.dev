@@ -1,16 +1,16 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import Logo from "../public/svg/logo";
 import Layout from "../components/layout";
 import PreLoader from "../components/ui/pre-loader";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   const [loader, setLoader] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoader(false);
-    }, 1000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
