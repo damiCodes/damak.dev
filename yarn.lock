@@ -1980,6 +1980,11 @@ react-pdf@^5.7.1:
     tiny-invariant "^1.0.0"
     tiny-warning "^1.0.0"
 
+react-scroll-rotate@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-scroll-rotate/-/react-scroll-rotate-0.0.7.tgz#54b8ab7b8d0ea8f8f4e64ed0c672170f11b05a36"
+  integrity sha512-Sfjlo5CnzRjQ/Dl5jticKqs/sNUjNsTwNQTmh8DFb6x+sh3xNT8cdIBzyT93hryJ08gpdaEqFsCyxD3Z+9E2VA==
+
 react-spinners@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-spinners/-/react-spinners-0.11.0.tgz#186fd150cc9f7ab1436227f70d5d113b47e9e43d"
