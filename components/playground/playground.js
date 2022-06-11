@@ -24,6 +24,7 @@ export default function Playground() {
         <button
           style={{
             backgroundColor: activeTab === "all" ? "var(--accent-color)" : null,
+            color: activeTab === "all" ? "var(--btn-text-color)" : null,
           }}
           onClick={() => setActiveTab("all")}
         >
@@ -33,6 +34,7 @@ export default function Playground() {
           style={{
             backgroundColor:
               activeTab === "featured" ? "var(--accent-color)" : null,
+            color: activeTab === "featured" ? "var(--btn-text-color)" : null,
           }}
           onClick={() => setActiveTab("featured")}
         >
