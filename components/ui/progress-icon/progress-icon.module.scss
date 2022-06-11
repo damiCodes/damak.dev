@@ -6,3 +6,13 @@
   width: 5rem;
   z-index: 11;
 }
+
+@media screen and (max-width: 480px) {
+  .progress-icon {
+    position: fixed;
+    top: 14rem;
+    right: 2rem;
+    height: 5rem;
+    width: 5rem;
+  }
+}
