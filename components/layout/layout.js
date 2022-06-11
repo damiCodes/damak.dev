@@ -12,7 +12,7 @@ export default function Layout({ children }) {
         {children}
         <Footer />
       </Wrapper>
-      <ProgressIcon />
+      {/* <ProgressIcon /> */}
     </div>
   );
 }
