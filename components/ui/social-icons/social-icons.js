@@ -9,11 +9,11 @@ import classes from "./social-icons.module.scss";
 export default function SocialIcons({ delay }) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{
-        duration: 0.6,
+        duration: 0.7,
         delay: delay,
       }}
       className={classes["social-icons"]}
