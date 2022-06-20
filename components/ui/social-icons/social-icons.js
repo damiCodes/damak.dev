@@ -29,11 +29,11 @@ export default function SocialIcons({ delay }) {
           <TwitterIcon />
         </a>
       </Link>
-      <Link href="https://www.instagram.com/damak.eth/">
+      {/* <Link href="https://www.instagram.com/damak.eth/">
         <a target="_blank">
           <InstagramIcon />
         </a>
-      </Link>
+      </Link> */}
       <Link href="https://www.linkedin.com/in/damilola-akinlade-059037189/">
         <a target="_blank">
           <LinkedinIcon />
