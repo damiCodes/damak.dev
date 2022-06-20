@@ -20,6 +20,7 @@
     "react-pdf": "^5.7.1",
     "react-scroll-rotate": "^0.0.7",
     "react-spinners": "^0.11.0",
+    "react-swipeable": "^7.0.0",
     "sass": "^1.49.9"
   },
   "devDependencies": {
