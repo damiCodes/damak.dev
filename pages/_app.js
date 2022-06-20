@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
+import AnimatedCursor from "react-animated-cursor";
 import Layout from "../components/layout";
 import PreLoader from "../components/ui/pre-loader";
 import "../styles/globals.scss";
@@ -25,10 +26,32 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" />
+        <title>Damak</title>
       </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <AnimatedCursor
+        innerSize={10}
+        outerSize={10}
+        color="29, 185, 84"
+        outerAlpha={0.2}
+        innerScale={0.8}
+        outerScale={4}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+        ]}
+      />
     </>
   );
 }
