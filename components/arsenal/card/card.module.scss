@@ -3,7 +3,6 @@
   width: 100%;
   position: relative;
   box-shadow: var(--box-shadow);
-
   .banner {
     display: flex;
     align-items: center;
@@ -13,7 +12,6 @@
     background-color: var(--bg-tertiary);
     z-index: 1;
     // transition: all 0.7s;
-
     .icon {
       display: flex;
       align-items: center;
@@ -26,45 +24,66 @@
       border-radius: 50%;
     }
   }
-
   .list {
     width: 100%;
     height: 15rem;
     background-color: var(--bg-white);
     color: var(--text-tertiary);
     font-size: 1.7rem;
-    padding: 2rem;
-    // margin-left: 0.2rem;
+    padding: 3rem 4rem;
     letter-spacing: 1px;
-    // transform: translateY(-130px);
     position: relative;
     z-index: 0;
-    // transition: all 0.8s;
-    // cursor: pointer;
-
-    &::after {
-      content: "";
+    overflow: hidden;
+    .dots {
       position: absolute;
-      width: 3rem;
-      height: 0.4rem;
-      bottom: 0.5rem;
+      bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
-      background-color: var(--bg-tertiary);
+      display: flex;
+      & > div {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        margin: 0 0.4rem;
+        background-color: var(--text-tertiary);
+        cursor: pointer;
+      }
+      .active {
+        background-color: var(--accent-color);
+      }
     }
-
-    .content {
+    & > svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2rem;
+      width: 2rem;
+      cursor: pointer;
+      &:nth-child(1) {
+        left: 2px;
+      }
+      &:nth-child(2) {
+        right: 2px;
+      }
+    }
+    .slider {
       ul {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         li {
           display: flex;
           align-items: center;
-
           svg {
             height: 2rem;
             width: 2rem;
             margin-right: 0.75rem;
           }
         }
+      }
+      .visible {
+        opacity: 1;
       }
     }
   }
@@ -91,6 +110,8 @@
       width: 22rem;
     }
     .list {
+      display: flex;
+      align-items: center;
       height: 22rem;
       width: 22rem;
       &::after {
@@ -99,15 +120,6 @@
         height: 3rem;
         width: 0.3rem;
         transform: translateY(-50%);
-      }
-      .content {
-        ul {
-          li {
-            &:not(:last-child) {
-              margin-bottom: 0.8rem;
-            }
-          }
-        }
       }
     }
   }
@@ -122,9 +134,6 @@
     .list {
       height: 18rem;
       width: 18rem;
-      &::after {
-        left: 17rem;
-      }
     }
   }
 }
@@ -136,11 +145,10 @@
       width: 14rem;
     }
     .list {
+      font-size: 1.3rem;
+      padding: 2.5rem;
       height: 14rem;
       width: 14rem;
-      &::after {
-        left: 13rem;
-      }
     }
   }
 }
