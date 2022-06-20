@@ -1,16 +1,29 @@
 .tabs {
   margin-bottom: 3rem;
   display: flex;
-
   button {
+    position: relative;
     padding: 0.7rem 1.5rem;
     border-radius: 0.3rem;
     background-color: transparent;
     box-shadow: none;
     color: var(--text-white);
-
+    text-transform: capitalize;
     &:not(:last-child) {
       margin-right: 1rem;
+    }
+    span {
+      position: relative;
+      z-index: 1;
+    }
+    & > div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--accent-color);
+      color: var(--btn-text-color);
     }
   }
 }

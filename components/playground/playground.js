@@ -6,6 +6,7 @@ import classes from "./playground.module.scss";
 
 export default function Playground() {
   const [activeTab, setActiveTab] = useState("all");
+  const buttons = [{ title: "all" }, { title: "featured" }];
 
   return (
     <Section
@@ -21,25 +22,20 @@ export default function Playground() {
         transition={{ duration: 0.6 }}
         className={classes.tabs}
       >
-        <button
-          style={{
-            backgroundColor: activeTab === "all" ? "var(--accent-color)" : null,
-            color: activeTab === "all" ? "var(--btn-text-color)" : null,
-          }}
-          onClick={() => setActiveTab("all")}
-        >
-          All
-        </button>
-        <button
-          style={{
-            backgroundColor:
-              activeTab === "featured" ? "var(--accent-color)" : null,
-            color: activeTab === "featured" ? "var(--btn-text-color)" : null,
-          }}
-          onClick={() => setActiveTab("featured")}
-        >
-          Featured
-        </button>
+        {buttons.map((item) => (
+          <motion.button
+            key={item.title}
+            onClick={() => setActiveTab(item.title)}
+          >
+            <span>{item.title}</span>
+            {activeTab === item.title && (
+              <motion.div
+                layoutId="activeTab"
+                transition={{ duration: 0.6 }}
+              ></motion.div>
+            )}
+          </motion.button>
+        ))}
       </motion.nav>
       {activeTab === "all" && <AllProjects />}
     </Section>
