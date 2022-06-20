@@ -1,8 +1,6 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Button from "../ui/button";
 import SocialIcons from "../ui/social-icons";
-import BackgroundText from "../ui/background-text";
 import classes from "./hero.module.scss";
 
 export default function Hero() {
@@ -81,7 +79,6 @@ export default function Hero() {
         <Button href="#contact">Contact me!</Button>
       </motion.div>
       <SocialIcons delay={3.3} />
-      <BackgroundText bgText="hello there!" />
     </header>
   );
 }
