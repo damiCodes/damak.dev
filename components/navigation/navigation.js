@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { motion, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { ScrollRotate } from "react-scroll-rotate";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import NavLink from "./nav-link/nav-link";
@@ -15,11 +15,8 @@ import classes from "./navigation.module.scss";
 
 export default function Navigation() {
   const { width } = useWindowDimensions();
-  const { scrollYProgress } = useViewportScroll();
-  // console.log(scrollYProgress);
 
   const links = [
-    // { href: "/", icon: <HomeIcon />, text: "home" },
     {
       href: "/#about",
       icon: <ProfileIcon />,
@@ -79,8 +76,8 @@ export default function Navigation() {
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
                   >
                     <NavLink href={link.href}>
@@ -123,8 +120,8 @@ export default function Navigation() {
             <ThemeToggle
               style={{
                 position: "fixed",
-                top: "8.5rem",
-                right: "2.9rem",
+                top: "3rem",
+                right: "2rem",
                 bottom: "auto",
               }}
             />
@@ -133,8 +130,8 @@ export default function Navigation() {
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
                   >
                     <NavLink href={link.href}>
