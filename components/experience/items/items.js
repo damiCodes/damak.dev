@@ -1,14 +1,46 @@
 import { motion } from "framer-motion";
 
+const variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+export function MyArtStock() {
+  return (
+    <motion.div variants={variants} initial="hidden" animate="visible">
+      <h3>Front-end Developer</h3>
+      <p>Lagos, 2022</p>
+      <ul>
+        <li>Worked with team members to create responsive user interfaces.</li>
+        <li>Integrated software components with third party API.</li>
+        <li>Produced clean and efficient codes based on specifications.</li>
+      </ul>
+    </motion.div>
+  );
+}
+
+export function Zozo() {
+  return (
+    <motion.div variants={variants} initial="hidden" animate="visible">
+      <h3>Front-end Developer</h3>
+      <p>Lagos, 2022</p>
+      <ul>
+        <li>
+          Built beautiful user interfaces for the Zozo bidding platform using
+          NextJS.
+        </li>
+        <li>Troubleshoot, debug and upgrade existing software.</li>
+        <li>Integrated software components with third party API.</li>
+      </ul>
+    </motion.div>
+  );
+}
+
 export function Swg() {
   return (
-    <motion.div
-      animate={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 30 }}
-      transition={{ duration: 0.5 }}
-    >
+    <motion.div variants={variants} initial="hidden" animate="visible">
       <h3>Front-end Developer</h3>
-      <p>August - December 2021</p>
+      <p>Abuja, 2021</p>
       <ul>
         <li>
           Built beautiful user interfaces for the Swirge social platform using
@@ -25,13 +57,9 @@ export function Swg() {
 
 export function Hng() {
   return (
-    <motion.div
-      animate={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 30 }}
-      transition={{ duration: 0.5 }}
-    >
+    <motion.div variants={variants} initial="hidden" animate="visible">
       <h3>Intern</h3>
-      <p>August - October 2021</p>
+      <p>Abuja, 2021</p>
       <ul>
         <li>
           Built responsive user Interfaces for the Zuri Chat App using ReactJS
@@ -47,13 +75,9 @@ export function Hng() {
 
 export function Ris() {
   return (
-    <motion.div
-      animate={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 30 }}
-      transition={{ duration: 0.5 }}
-    >
+    <motion.div variants={variants} initial="hidden" animate="visible">
       <h3>Intern</h3>
-      <p>August - November 2019</p>
+      <p>Lagos, 2019</p>
       <ul>
         <li>Built company webpages with wordpress</li>
         <li>UI Design</li>
@@ -65,13 +89,9 @@ export function Ris() {
 
 export function Gni() {
   return (
-    <motion.div
-      animate={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 30 }}
-      transition={{ duration: 0.5 }}
-    >
+    <motion.div variants={variants} initial="hidden" animate="visible">
       <h3>Intern</h3>
-      <p>October 2018 - March 2019</p>
+      <p>Lagos, 2019</p>
       <ul>
         <li>Hardware maintenance and repair</li>
         <li> Network troubleshooting and configuration</li>
