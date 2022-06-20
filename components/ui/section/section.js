@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import BackgroundText from "../background-text";
 import classes from "./section.module.scss";
 
-export default function Section({ children, id, heading, tagline, bgText }) {
+export default function Section({ children, id, heading, tagline }) {
   return (
     <section id={id} className={classes.section}>
       <motion.div
@@ -26,7 +25,6 @@ export default function Section({ children, id, heading, tagline, bgText }) {
       >
         {children}
       </motion.div>
-      <BackgroundText bgText={bgText} />
     </section>
   );
 }
