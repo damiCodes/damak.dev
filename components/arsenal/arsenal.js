@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Section from "../ui/section/";
 import Card from "./card";
@@ -9,8 +10,10 @@ import TypeScriptIcon from "../../public/svg/typescript-icon";
 import ReactIcon from "../../public/svg/react-icon";
 import NextjsIcon from "../../public/svg/nextjs-icon";
 import Jquery from "../../public/svg/jquery-icon";
+import ReduxIcon from "../../public/svg/redux-icon";
+import FramerIcon from "../../public/svg/framer-icon";
+import TailwindIcon from "../../public/svg/tailwind-icon";
 import GitIcon from "../../public/svg/git-icon";
-import { motion } from "framer-motion";
 import FirebaseIcon from "../../public/svg/firebase-icon";
 import VercelIcon from "../../public/svg/vercel-icon";
 import classes from "./arsenal.module.scss";
@@ -20,31 +23,54 @@ export default function Arsenal() {
   const cards = [
     {
       id: "programming-languages",
-      icon: "</>",
+      icon: "🆚",
       lists: [
-        // { icon: <HtmlIcon />, text: "HTML" },
-        // { icon: <CssIcon />, text: "CSS" },
-        { icon: <ScssIcon />, text: "SCSS" },
-        { icon: <JavascriptIcon />, text: width > 380 ? "Javascript" : "JS" },
-        { icon: <TypeScriptIcon />, text: width > 380 ? "Typescript" : "TS" },
+        [
+          { icon: <HtmlIcon />, text: "HTML" },
+          { icon: <CssIcon />, text: "CSS" },
+          { icon: <ScssIcon />, text: "SCSS" },
+        ],
+        [
+          {
+            icon: <JavascriptIcon />,
+            text: width > 380 ? "Javascript" : "JS",
+          },
+          {
+            icon: <TypeScriptIcon />,
+            text: width > 380 ? "Typescript" : "TS",
+          },
+        ],
       ],
     },
+
     {
       id: "libraries and frameworks",
-      icon: "{ }",
+      icon: "⚛️",
       lists: [
-        { icon: <ReactIcon />, text: "React" },
-        { icon: <NextjsIcon />, text: "Next" },
-        // { icon: <Jquery />, text: "Jquery" },
+        [
+          { icon: <ReactIcon />, text: "React" },
+          { icon: <NextjsIcon />, text: "Next" },
+        ],
       ],
     },
+
     {
       id: "tools and platforms",
       icon: "⚒️",
       lists: [
-        { icon: <GitIcon />, text: "Git" },
-        { icon: <FirebaseIcon />, text: "Firebase" },
-        { icon: <VercelIcon />, text: "Vercel" },
+        [
+          { icon: <GitIcon />, text: "Git" },
+          { icon: <FirebaseIcon />, text: "Firebase" },
+          { icon: <VercelIcon />, text: "Vercel" },
+        ],
+        [
+          { icon: <ReduxIcon />, text: "Redux" },
+          {
+            icon: <FramerIcon />,
+            text: width > 870 ? "Framer Motion" : "Framer",
+          },
+          { icon: <TailwindIcon />, text: "Tailwind" },
+        ],
       ],
     },
   ];
