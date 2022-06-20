@@ -88,7 +88,7 @@ export default function Contact() {
             </span>
             or send a message via the form.
           </p>
-          <SocialIcons delay={0.8} />
+          <SocialIcons delay={0} />
         </motion.div>
         <motion.form
           initial={{ x: 200, opacity: 0 }}
