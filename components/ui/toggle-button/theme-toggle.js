@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import MoonIcon from "../../../public/svg/moon-icon";
 import SunIcon from "../../../public/svg/sun-icon";
 import classes from "./theme-toggle.module.scss";
@@ -57,9 +58,15 @@ export default function ThemeToggle(props) {
   }, []);
 
   return (
-    <div className={classes.wrapper} {...props}>
+    <motion.div
+      className={classes.wrapper}
+      {...props}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, duration: 0.6 }}
+    >
       {theme === "light" && <MoonIcon onClick={() => handleTheme("dark")} />}
       {theme === "dark" && <SunIcon onClick={() => handleTheme("light")} />}
-    </div>
+    </motion.div>
   );
 }
