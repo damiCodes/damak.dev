@@ -88,7 +88,7 @@ export default function Navigation() {
                 );
               })}
             </ul>
-            <ThemeToggle />
+            <ThemeToggle style={{ position: "relative", bottom: "4rem" }} />
           </motion.nav>
         </>
       )}
@@ -122,7 +122,6 @@ export default function Navigation() {
                 position: "fixed",
                 top: "3rem",
                 right: "2rem",
-                bottom: "auto",
               }}
             />
             <ul>
