@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import PreLoader from "../components/ui/pre-loader";
 import "../styles/globals.scss";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" />
-        <title>Damak</title>
+        <title>Damak | Creative Front-end developer.</title>
       </Head>
       <Layout>
         <Component {...pageProps} />
@@ -55,5 +55,3 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
-
-export default MyApp;
