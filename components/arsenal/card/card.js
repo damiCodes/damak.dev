@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import { Left, Right } from "../../../public/svg/direction-icons";
@@ -9,14 +9,18 @@ export default function Card({ icon, lists }) {
   const [coordinate, setCoordinate] = useState(100);
 
   function nextSlide() {
-    setCoordinate(100);
+    setCoordinate(-100);
+    if (slideIndex === lists.length - 1) {
+      setSlideIndex(0);
+      return;
+    }
     if (slideIndex < lists.length) {
       setSlideIndex(slideIndex + 1);
     }
   }
 
   function prevSlide() {
-    setCoordinate(-100);
+    setCoordinate(100);
     if (slideIndex < lists.length && slideIndex !== 0)
       setSlideIndex(slideIndex - 1);
     if (slideIndex === 0) setSlideIndex(lists.length - 1);
@@ -29,10 +33,6 @@ export default function Card({ icon, lists }) {
     preventScrollOnSwipe: true,
     trackMouse: true,
   });
-
-  useEffect(() => {
-    if (slideIndex === lists.length) setSlideIndex(0);
-  }, [slideIndex, lists.length]);
 
   return (
     <div className={styles.container}>
