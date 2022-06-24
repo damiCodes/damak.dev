@@ -59,7 +59,7 @@ export function Hng() {
   return (
     <motion.div variants={variants} initial="hidden" animate="visible">
       <h3>Intern</h3>
-      <p>Abuja, 2021</p>
+      <p>Lagos, 2021</p>
       <ul>
         <li>
           Built responsive user Interfaces for the Zuri Chat App using ReactJS
