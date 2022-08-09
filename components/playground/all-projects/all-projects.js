@@ -18,21 +18,6 @@ export default function AllProjects() {
       text: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, rem
     tenetur. Excepturi beatae, nobis placeat vitae, labore sequi dolores. Labore sequi dolores`,
     },
-    {
-      text: ` Lorem dolor sit amet consectetur adipisicing elit. Ipsum, rem
-    tenetur. Excepturi beatae, nobis placeat vitae, labore sequi dolores
-    tenetur. Labore sequi dolores`,
-    },
-    {
-      text: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, rem
-    tenetur. Excepturi beatae, nobis placeat vitae, labore sequi dolores
-    tenetur. Labore dolores`,
-    },
-    // {
-    //   text: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, rem
-    // tenetur. Excepturi placeat vitae, labore sequi dolores
-    // tenetur. Labore sequi dolores`,
-    // },
   ];
   return (
     <AnimatePresence>
