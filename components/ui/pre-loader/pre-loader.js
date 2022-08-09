@@ -6,14 +6,16 @@ export default function PreLoader() {
   const exitVariant = {
     hidden: {
       scale: 0,
+      opacity: 0,
       transition: {
-        duration: 1,
-        delay: 2,
+        duration: 0.5,
+        delay: 1.5,
         ease: "easeInOut",
       },
     },
     visible: {
       scale: 1,
+      opacity: 1,
     },
   };
 
@@ -24,7 +26,7 @@ export default function PreLoader() {
     visible: {
       scale: 1,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeInOut",
       },
     },
@@ -39,8 +41,8 @@ export default function PreLoader() {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 1,
-        delay: 0.8,
+        duration: 0.7,
+        delay: 0.7,
         ease: "easeInOut",
       },
     },
