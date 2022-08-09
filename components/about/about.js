@@ -34,12 +34,19 @@ export default function About() {
           project I partake in.
         </motion.p>
         {width <= 800 && (
-          <Button
-            href="https://drive.google.com/file/d/1gkGii5S89Xp4vda9RFK_jw6yioDWED5m/view?usp=sharing"
-            target="_blank"
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.6 }}
           >
-            Resume
-          </Button>
+            <Button
+              href="https://drive.google.com/file/d/1gkGii5S89Xp4vda9RFK_jw6yioDWED5m/view?usp=sharing"
+              target="_blank"
+            >
+              Resume
+            </Button>
+          </motion.div>
         )}
         <div className={classes.image}>
           <Programmer
@@ -51,12 +58,19 @@ export default function About() {
         </div>
       </div>
       {width > 800 && (
-        <Button
-          href="https://drive.google.com/file/d/1gkGii5S89Xp4vda9RFK_jw6yioDWED5m/view?usp=sharing"
-          target="_blank"
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 0.6 }}
         >
-          Resume
-        </Button>
+          <Button
+            href="https://drive.google.com/file/d/1gkGii5S89Xp4vda9RFK_jw6yioDWED5m/view?usp=sharing"
+            target="_blank"
+          >
+            Resume
+          </Button>
+        </motion.div>
       )}
     </Section>
   );
