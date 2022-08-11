@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       auth: {
         type: "OAuth2",
         user: process.env.EMAIL,
-        // clientId: process.env.CLIENT_ID,
+        clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
         refreshToken: process.env.REFRESH_TOKEN,
         accessToken,
