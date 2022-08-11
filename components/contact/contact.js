@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { PuffLoader } from "react-spinners";
 import Section from "../ui/section/";
@@ -14,6 +14,16 @@ export default function Contact() {
   const [alertType, setAlertType] = useState("");
   const [alertMessage, setAlertMessage] = useState("Name cannot be blank");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAlert(false);
+    }, 4000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [alert]);
 
   function submitHandler(event) {
     event.preventDefault();
@@ -131,18 +141,23 @@ export default function Contact() {
               )}
             </button>
           </div>
-          {alert && (
-            <span
-              style={{
-                color:
-                  alertType === "success"
-                    ? "var(--accent-color)"
-                    : "var(--text-white)",
-              }}
-            >
-              {alertMessage}
-            </span>
-          )}
+          <AnimatePresence>
+            {alert && (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                style={{
+                  color:
+                    alertType === "success"
+                      ? "var(--accent-color)"
+                      : "var(--text-white)",
+                }}
+              >
+                {alertMessage}
+              </motion.span>
+            )}
+          </AnimatePresence>
         </motion.form>
       </div>
     </Section>
