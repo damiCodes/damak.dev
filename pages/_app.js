@@ -26,7 +26,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" />
-        <title>Damilola Akinlade | Creative Front-end developer.</title>
+        <title>Damilola Akinlade | Front-end developer</title>
       </Head>
       <Layout>
         <Component {...pageProps} />
