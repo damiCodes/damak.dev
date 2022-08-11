@@ -7,6 +7,8 @@ import classes from "./about.module.scss";
 
 export default function About() {
   const { width } = useWindowDimensions();
+  const resumeLink =
+    "https://drive.google.com/file/d/1wlUcipMItiYD9Z_0o4aFVjpT3AKYrjqH/view?usp=sharing";
 
   return (
     <Section
@@ -40,10 +42,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <Button
-              href="https://drive.google.com/file/d/1gkGii5S89Xp4vda9RFK_jw6yioDWED5m/view?usp=sharing"
-              target="_blank"
-            >
+            <Button href={resumeLink} target="_blank">
               Resume
             </Button>
           </motion.div>
@@ -64,10 +63,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <Button
-            href="https://drive.google.com/file/d/1gkGii5S89Xp4vda9RFK_jw6yioDWED5m/view?usp=sharing"
-            target="_blank"
-          >
+          <Button href={resumeLink} target="_blank">
             Resume
           </Button>
         </motion.div>
