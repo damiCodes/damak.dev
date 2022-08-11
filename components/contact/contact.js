@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import BeatLoader from "react-spinners/BeatLoader";
+import { PuffLoader } from "react-spinners";
 import Section from "../ui/section/";
 import SocialIcons from "../ui/social-icons";
 import classes from "./contact.module.scss";
@@ -10,44 +10,32 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [alert, setAlert] = useState("Name cannot be blank");
+  const [alert, setAlert] = useState(false);
   const [alertType, setAlertType] = useState("");
+  const [alertMessage, setAlertMessage] = useState("Name cannot be blank");
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const timer1 = setTimeout(() => {
-      setAlertType("");
-    }, 3000);
-    const timer2 = setTimeout(() => {
-      setAlert("");
-    }, 4000);
-
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-    };
-  }, [alert, alertType]);
 
   function submitHandler(event) {
     event.preventDefault();
+    setAlert(false);
     setLoading(true);
 
     if (name.trim() === "") {
       setLoading(false);
-      setAlert("Name cannot be blank! ✖");
-      setAlertType("error");
+      setAlertMessage("Name cannot be blank! ✖");
+      setAlertType("failed");
       return;
     }
     if (email.trim() === "" || !email.includes("@")) {
       setLoading(false);
-      setAlert("Invalid email Address! ✖");
-      setAlertType("error");
+      setAlertMessage("Invalid email Address! ✖");
+      setAlertType("failed");
       return;
     }
     if (message.trim() === "") {
       setLoading(false);
-      setAlert("Message cannot be blank! ✖");
-      setAlertType("error");
+      setAlertMessage("Message cannot be blank! ✖");
+      setAlertType("failed");
       return;
     }
 
@@ -62,12 +50,15 @@ export default function Contact() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setAlert(data.message);
-        setAlertType(data.type);
+        setAlertMessage(data.message);
+        setAlertType(data.status);
+        setAlert(true);
         setLoading(false);
-        setName("");
-        setEmail("");
-        setMessage("");
+        if (data.status === "success") {
+          setName("");
+          setEmail("");
+          setMessage("");
+        }
       });
   }
 
@@ -134,14 +125,25 @@ export default function Contact() {
 
             <button>
               {loading ? (
-                <BeatLoader color="#ffffff" size={10} />
+                <PuffLoader color="#ffffff" size={25} />
               ) : (
                 `Send Message`
               )}
             </button>
           </div>
+          {alert && (
+            <span
+              style={{
+                color:
+                  alertType === "success"
+                    ? "var(--accent-color)"
+                    : "var(--text-white)",
+              }}
+            >
+              {alertMessage}
+            </span>
+          )}
         </motion.form>
-        <div className={`${classes.alert} ${classes[alertType]}`}>{alert}</div>
       </div>
     </Section>
   );

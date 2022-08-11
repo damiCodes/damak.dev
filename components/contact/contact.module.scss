@@ -29,6 +29,7 @@
     }
   }
   .form {
+    position: relative;
     width: 47%;
     &-group {
       display: flex;
@@ -98,24 +99,11 @@
         }
       }
     }
-  }
-  .alert {
-    border-radius: 0.3rem;
-    position: absolute;
-    padding: 0.8rem 2rem;
-    right: 0;
-    bottom: -7rem;
-    transform: translateX(100%);
-    transition: all 0.5s;
-    box-shadow: 0.6rem 0.4rem 1.6rem 0.2rem rgba(0, 0, 0, 0.25);
-  }
-  .error {
-    background-color: var(--bg-tertiary);
-    transform: translateX(0);
-  }
-  .success {
-    background-color: var(--accent-color);
-    transform: translateX(0);
+    & > span {
+      position: absolute;
+      bottom: 4rem;
+      left: 0;
+    }
   }
 }
 
