@@ -8,11 +8,9 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      {width <= 640 && (
-        <div className={classes.logo}>
-          <Logo />
-        </div>
-      )}
+      <div className={classes.logo}>
+        <Logo />
+      </div>
       <div className={classes.content}>
         <p>
           Designed & built by <span>Damilola Akinlade</span>
