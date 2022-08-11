@@ -33,11 +33,11 @@ export default function Navigation() {
 
       text: width > 480 ? "experience" : null,
     },
-    {
-      href: "/#playground",
-      icon: <ProjectIcon />,
-      text: width > 480 ? "playground" : null,
-    },
+    // {
+    //   href: "/#playground",
+    //   icon: <ProjectIcon />,
+    //   text: width > 480 ? "playground" : null,
+    // },
     {
       href: "/#contact",
       icon: <MailIcon />,
