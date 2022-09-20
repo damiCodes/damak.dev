@@ -11,7 +11,6 @@
     height: 22rem;
     background-color: var(--bg-tertiary);
     z-index: 1;
-    // transition: all 0.7s;
     .icon {
       display: flex;
       align-items: center;
@@ -22,6 +21,10 @@
       width: 7rem;
       height: 7rem;
       border-radius: 50%;
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
   .list {
