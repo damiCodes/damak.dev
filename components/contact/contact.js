@@ -59,7 +59,6 @@ export default function Contact() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setAlertMessage(data.message);
         setAlertType(data.status);
         setAlert(true);
