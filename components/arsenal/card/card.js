@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
-import { Left, Right } from "../../../public/svg/direction-icons";
+import * as icons from "../../../public/svg/icons";
 import styles from "./card.module.scss";
 
 export default function Card({ icon, lists }) {
@@ -37,13 +37,22 @@ export default function Card({ icon, lists }) {
   return (
     <div className={styles.container}>
       <div className={styles.banner}>
-        <div className={styles.icon}>{icon}</div>
+        <motion.div
+          whileHover={{
+            scale: [1, 1.3, 1.4, 1, 1],
+            rotate: [0, 0, 270, 270, 0],
+            borderRadius: ["50%", "20%", "30%", "40%", "50%"],
+          }}
+          className={styles.icon}
+        >
+          {icon}
+        </motion.div>
       </div>
       <div className={styles.list} {...handlers}>
         {lists.length > 1 && (
           <>
-            <Left onClick={prevSlide} />
-            <Right onClick={nextSlide} />
+            <icons.LeftArrow onClick={prevSlide} />
+            <icons.RightArrow onClick={nextSlide} />
             <div className={styles.dots}>
               {Array.apply(null, Array(lists.length)).map((item, index) => (
                 <div

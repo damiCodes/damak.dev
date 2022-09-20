@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Section from "../ui/section/";
 import Button from "../ui/button";
-import Programmer from "../../public/svg/programmer";
+import { Programmer } from "../../public/svg/images";
 import classes from "./about.module.scss";
 
 export default function About() {

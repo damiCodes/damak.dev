@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Programmer(props) {
+export function Programmer(props) {
   return (
     <motion.svg
       {...props}

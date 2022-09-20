@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import RightArrow from "../../../public/svg/right-arrow";
+import * as icons from "../../../public/svg/icons";
 import classes from "./button.module.scss";
 
 export default function Button({ href, children, target }) {
@@ -9,7 +9,7 @@ export default function Button({ href, children, target }) {
       <a target={target} className={classes.btn}>
         {children}{" "}
         <span>
-          <RightArrow />
+          <icons.RightArrowCTA />
         </span>
       </a>
     </Link>

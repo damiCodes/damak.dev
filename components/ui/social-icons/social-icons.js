@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import GithubIcon from "../../../public/svg/github-icon";
-import LinkedinIcon from "../../../public/svg/linkedin-icon";
-import TwitterIcon from "../../../public/svg/twitter-icon";
-import InstagramIcon from "../../../public/svg/instagram-icon";
+import * as icons from "../../../public/svg/icons";
 import classes from "./social-icons.module.scss";
 
 export default function SocialIcons({ delay }) {
@@ -20,23 +17,23 @@ export default function SocialIcons({ delay }) {
     >
       <Link href="https://github.com/damakdev">
         <a target="_blank">
-          <GithubIcon />
+          <icons.Github />
         </a>
       </Link>
 
       <Link href="https://twitter.com/__damak">
         <a target="_blank">
-          <TwitterIcon />
+          <icons.Twitter />
         </a>
       </Link>
       {/* <Link href="https://www.instagram.com/damak.eth/">
         <a target="_blank">
-          <InstagramIcon />
+          <icons.Instagram />
         </a>
       </Link> */}
       <Link href="https://www.linkedin.com/in/damilola-akinlade-059037189/">
         <a target="_blank">
-          <LinkedinIcon />
+          <icons.Linkedin />
         </a>
       </Link>
     </motion.div>

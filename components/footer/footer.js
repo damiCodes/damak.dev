@@ -1,5 +1,5 @@
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import Logo from "../../public/svg/logo";
+import * as icons from "../../public/svg/icons";
 import classes from "./footer.module.scss";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className={classes.footer}>
       <div className={classes.logo}>
-        <Logo />
+        <icons.Logo />
       </div>
       <div className={classes.content}>
         <p>

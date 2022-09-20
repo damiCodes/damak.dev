@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ScrollRotate } from "react-scroll-rotate";
+import * as icons from "../../public/svg/icons";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import NavLink from "./nav-link/nav-link";
 import ThemeToggle from "../ui/toggle-button/theme-toggle";
-import HomeIcon from "../../public/svg/home-icon";
-import ProfileIcon from "../../public/svg/profile-icon";
-import Logo from "../../public/svg/logo";
-import TerminalIcon from "../../public/svg/terminal-icon";
-import WorkIcon from "../../public/svg/work-icon";
-import ProjectIcon from "../../public/svg/project-icon";
-import MailIcon from "../../public/svg/mail-icon";
+// import ProfileIcon from "../../public/svg/profile-icon";
+// import Logo from "../../public/svg/logo";
+// import TerminalIcon from "../../public/svg/terminal-icon";
+// import WorkIcon from "../../public/svg/work-icon";
+// import ProjectIcon from "../../public/svg/project-icon";
+// import MailIcon from "../../public/svg/mail-icon";
 import classes from "./navigation.module.scss";
 
 export default function Navigation() {
@@ -19,17 +19,17 @@ export default function Navigation() {
   const links = [
     {
       href: "/#about",
-      icon: <ProfileIcon />,
+      icon: <icons.Profile />,
       text: width > 480 ? "about" : null,
     },
     {
       href: "/#arsenal",
-      icon: <TerminalIcon />,
+      icon: <icons.Terminal />,
       text: width > 480 ? "arsenal" : null,
     },
     {
       href: "/#experience",
-      icon: <WorkIcon />,
+      icon: <icons.Work />,
 
       text: width > 480 ? "experience" : null,
     },
@@ -40,7 +40,7 @@ export default function Navigation() {
     // },
     {
       href: "/#contact",
-      icon: <MailIcon />,
+      icon: <icons.Mail />,
       text: width > 480 ? "contact" : null,
     },
   ];
@@ -66,7 +66,7 @@ export default function Navigation() {
               <ScrollRotate method="perc">
                 <Link href="/">
                   <a>
-                    <Logo width="30px" fill="#ffffff" />
+                    <icons.Logo width="30px" fill="#ffffff" />
                   </a>
                 </Link>
               </ScrollRotate>
@@ -112,7 +112,7 @@ export default function Navigation() {
               <ScrollRotate method="perc">
                 <Link href="/">
                   <a>
-                    <Logo width="20px" fill="#ffffff" />
+                    <icons.Logo width="20px" fill="#ffffff" />
                   </a>
                 </Link>
               </ScrollRotate>
