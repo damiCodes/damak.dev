@@ -12,6 +12,9 @@
     h3 {
       text-transform: capitalize;
       margin-bottom: 0.5rem;
+      span {
+        text-transform: initial;
+      }
     }
   }
 }

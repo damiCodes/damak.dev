@@ -11,7 +11,10 @@ export default function Section({ children, id, heading, tagline }) {
         transition={{ duration: 0.8 }}
         className={classes.heading}
       >
-        <h2>{heading}</h2>
+        <h2>
+          {heading}
+          <span>.tsx</span>
+        </h2>
         <h3>{tagline}</h3>
       </motion.div>
       <motion.div
