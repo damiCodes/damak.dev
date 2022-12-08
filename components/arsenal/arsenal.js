@@ -37,6 +37,7 @@ export default function Arsenal() {
         [
           { icon: <icons.React />, text: "React" },
           { icon: <icons.NextJS />, text: "Next" },
+          { icon: <icons.ElectronJS />, text: "Electron" },
         ],
       ],
     },
