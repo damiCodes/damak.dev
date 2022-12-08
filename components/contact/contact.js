@@ -72,7 +72,7 @@ export default function Contact() {
   }
 
   return (
-    <Section id="contact" heading="get in touch." tagline="let's Talk!">
+    <Section id="contact" heading="get-in-touch" tagline="let's Talk!">
       <div className={classes.body}>
         <motion.div
           initial={{ x: -200, opacity: 0 }}
