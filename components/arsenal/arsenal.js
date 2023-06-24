@@ -35,10 +35,11 @@ export default function Arsenal() {
       icon: <icons.JSON />,
       lists: [
         [
+          { icon: <icons.Angular />, text: "Angular" },
           { icon: <icons.React />, text: "React" },
           { icon: <icons.NextJS />, text: "Next" },
-          { icon: <icons.ElectronJS />, text: "Electron" },
         ],
+        [{ icon: <icons.ElectronJS />, text: "Electron" }],
       ],
     },
 
