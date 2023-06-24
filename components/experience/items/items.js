@@ -5,6 +5,30 @@ const variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+export function Dot() {
+  return (
+    <motion.div variants={variants} initial="hidden" animate="visible">
+      <h3>Front-end Developer</h3>
+      <p>Lagos, 2023</p>
+      <ul>
+        <li>
+          Implemented and developed the visual and interactive elements of the
+          user interface and logic of a retail application for selling health
+          insurance.
+        </li>
+        <li>
+          Developed scalable and efficient web applications using Next JS and
+          Angular.
+        </li>
+        <li>
+          Collaborated with other developers to identify and alleviate bugs and
+          errors in software.
+        </li>
+      </ul>
+    </motion.div>
+  );
+}
+
 export function OneFlare() {
   return (
     <motion.div variants={variants} initial="hidden" animate="visible">

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Section from "../ui/section/";
-import { OneFlare, BluColar, Swirge, Hng, Ris } from "./items/items";
+import { OneFlare, BluColar, Swirge, Hng, Ris, Dot } from "./items";
 import classes from "./experience.module.scss";
 
 const list = [
+  { title: "Dot", id: "dot" },
   { title: "One Flare", id: "one" },
   { title: "BluColar", id: "blu" },
   { title: "Swirge", id: "swg" },
@@ -52,6 +53,7 @@ export default function Experience() {
             transition={{ delay: 0.9, duration: 0.6 }}
             className={classes["tab-content"]}
           >
+            {activeTab === "dot" && <Dot />}
             {activeTab === "one" && <OneFlare />}
             {activeTab === "blu" && <BluColar />}
             {activeTab === "swg" && <Swirge />}
