@@ -69,7 +69,6 @@ export default function Hero() {
         className={classes.sub}
       >
         <h3>I create amazing user experience.</h3>
-        {/* <h3>I write clean and efficient code.</h3> */}
       </motion.div>
       <motion.div
         initial={{ y: 40, opacity: 0 }}
