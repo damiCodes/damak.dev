@@ -8,7 +8,7 @@ import classes from "./about.module.scss";
 export default function About() {
   const { width } = useWindowDimensions();
   const resumeLink =
-    "https://drive.google.com/file/d/194fFlN2fbhyBU3797ylL2azezjSlCFPM/view?usp=sharing";
+    "https://drive.google.com/file/d/1HryGwKuEbNmDTaW5h4xB8ANVHTnyIgty/view?usp=sharing";
 
   return (
     <Section
